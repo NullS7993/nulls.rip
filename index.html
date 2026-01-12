@@ -149,13 +149,15 @@
     <script>
         const discordBtn = document.getElementById('discordBtn');
         const alertBox = document.getElementById('copy-alert');
+        const discordUser = "nulls7993";
 
         discordBtn.addEventListener('click', () => {
-            navigator.clipboard.writeText("nulls7993");
-            alertBox.classList.add('show');
-            setTimeout(() => {
-                alertBox.classList.remove('show');
-            }, 3000);
+            navigator.clipboard.writeText(discordUser).then(() => {
+                alertBox.classList.add('show');
+                setTimeout(() => {
+                    alertBox.classList.remove('show');
+                }, 3000);
+            });
         });
     </script>
 </body>
